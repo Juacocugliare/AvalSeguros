@@ -1258,35 +1258,25 @@ section,
 }
 
 .about .info-panel .cta-button {
+  margin-top: 1.5rem;
   display: inline-flex;
   align-items: center;
+  background: var(--accent-color);
   gap: 0.75rem;
-  background: transparent;
-  color: var(--accent-color);
+  color: var(--contrast-color);
   border: 2px solid var(--accent-color);
   padding: 0.875rem 2rem;
-  border-radius: 8px;
+  border-radius: 30px;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.1rem;
   transition: all 0.3s ease;
   font-family: var(--heading-font);
+  cursor: default;
 }
 
 .about .info-panel .cta-button i {
   transition: transform 0.3s ease;
 }
-
-.about .info-panel .cta-button:hover {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.about .info-panel .cta-button:hover i {
-  transform: translateX(5px);
-}
-
-
-
 
 /*--------------------------------------------------------------
 # Contact Section
