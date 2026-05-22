@@ -236,8 +236,8 @@ h6 {
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
-    padding: 18px 15px;
-    font-size: 17px;
+    padding: 10px 15px;
+    font-size: 16px;
     font-family: var(--nav-font);
     font-weight: 500;
     display: flex;
@@ -260,11 +260,30 @@ h6 {
     padding-right: 0;
   }
 
-  .navmenu li:hover>a,
-  .navmenu .active,
-  .navmenu .active:focus {
-    color: var(--nav-hover-color);
-  }
+  .navmenu ul li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background: #2563eb;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.navmenu ul li a:hover::after {
+  width: 70%;
+}
+
+.navmenu ul li a.active::after {
+ width: 70%;
+}
+
+.navmenu ul li a.active {
+  color: #2563eb;
+}
 
   .navmenu .dropdown ul {
     margin: 0;
@@ -728,43 +747,6 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Global Page Titles & Breadcrumbs
---------------------------------------------------------------*/
-.page-title {
-  --background-color: color-mix(in srgb, var(--default-color), transparent 96%);
-  color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 25px 0;
-  position: relative;
-}
-
-.page-title h1 {
-  font-size: 24px;
-  font-weight: 600;
-}
-
-.page-title .breadcrumbs ol {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.page-title .breadcrumbs ol li+li {
-  padding-left: 10px;
-}
-
-.page-title .breadcrumbs ol li+li::before {
-  content: "/";
-  display: inline-block;
-  padding-right: 10px;
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
-
-/*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/
 section,
@@ -939,54 +921,6 @@ section,
   100% {
     transform: translateY(-10px);
   }
-}
-
-/*--------------------------------------------------------------
-# Featured Services Section
---------------------------------------------------------------*/
-
-
-.hero-features .feature-item {
-  text-align: center;
-  padding: 2.3rem 1.3rem;
-  transition: all 0.3s ease;
-}
-
-.hero-features .feature-item:hover {
-  transform: translateY(-5px);
-}
-
-.hero-features .feature-item .icon {
-  width: 120px;
-  height: 120px;
-  background: color-mix(in srgb, var(--accent-color), transparent 90%);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1.5rem;
-  transition: all 0.3s ease;
-}
-
-.hero-features .feature-item .icon i {
-  font-size: 3rem;
-  color: var(--accent-color);
-}
-
-.hero-features .feature-item h4 {
-  font-size: 1.90rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  color: var(--heading-color);
-}
-
-.hero-features .feature-item:hover .icon {
-  background: var(--accent-color);
-  transform: scale(1.1);
-}
-
-.hero-features .feature-item:hover .icon i {
-  color: var(--contrast-color);
 }
 
 /*--------------------------------------------------------------
@@ -1558,4 +1492,108 @@ section,
   .why-us .feature-card h4 {
     font-size: 1.2rem;
   }
+}
+
+.garantia-section {
+  padding: 90px 0;
+  background: #f7f9fc;
+}
+
+.garantia-section .section-title {
+  margin-bottom: 5px;
+}
+
+.garantia-section .section-title h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #0b163f;
+  margin-bottom: 15px;
+}
+
+.garantia-section .section-title p {
+  max-width: 650px;
+  margin: auto;
+  color: #5f6b85;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.garantia-item {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  height: 100%;
+  transition: 0.3s;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.04);
+}
+
+.garantia-item:hover {
+  transform: translateY(-5px);
+}
+
+.garantia-item .icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #b6d5fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.garantia-item .icon i {
+  font-size: 30px;
+  color: var(--nav-hover-color);
+}
+
+.garantia-item h4 {
+  color: var(--heading-color);
+  font-family: var(--nav-font);
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.garantia-item p {
+  color: #acb3c3;
+  font-size: 15px;
+  line-height: 27px;
+  margin-bottom: 0;
+}
+
+.ws-btn{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 16px 16px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+.ws-btn:hover {
+  color: #fff !important;
+  transform: scale(1.05);
+}
+.ws-btn i{
+  font-size: 19px;
+}
+
+.btn-wsp{
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  bottom: 60px;
+  right: 9px;
+  background: #0df053;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
 }
