@@ -818,7 +818,7 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 75%);
+  background: color-mix(in srgb, var(--background-color), transparent 85%);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -1596,4 +1596,22 @@ section,
   font-size: 30px;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
   z-index: 100;
+}
+
+.larede{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ig-btn{
+  font-size: 26px;
+  font-weight: 600;
+  color:#1f2937;
+  opacity:.75;
+}
+.ig-btn:hover{
+  transform: scale(1.1);
+  color:#246BFD;
+   opacity:1;
 }
