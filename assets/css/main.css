@@ -1495,7 +1495,7 @@ section,
 }
 
 .garantia-section {
-  padding: 90px 0;
+  padding: 50px 0;
   background: #f7f9fc;
 }
 
@@ -1605,13 +1605,67 @@ section,
 }
 
 .ig-btn{
-  font-size: 26px;
-  font-weight: 600;
-  color:#1f2937;
+  font-size: 30px;
+  font-weight: 700;
+  color:#ca428f;
   opacity:.75;
 }
 .ig-btn:hover{
   transform: scale(1.1);
   color:#246BFD;
    opacity:1;
+}
+
+.office-img{
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px){
+
+  .section-title h1{
+    font-size: 26px !important;
+    text-align: center;
+  }
+
+  .panel-header h2{
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .avaldescript{
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .cta-button{
+    width: 100%;
+    text-align: center;
+  }
+
+  .gallery-grid{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .about-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .office-section{
+    margin-top: 3rem !important;
+  }
+
+  .office-card{
+    display: flex;
+    justify-content: center;
+  }
+
 }
