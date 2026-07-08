@@ -190,7 +190,7 @@ h6 {
 }
 
 .header .logo img {
-  width: 86px;
+  width: 80px;
   height: auto; 
   margin-right: 8px;
 }
@@ -813,13 +813,13 @@ section,
   display: flex;
   align-items: center;
   background: url("../img/banner.png") top left;
-  background-position: center 30%;
+  background-position: center 37%;
   background-size: cover;
 }
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 70%);
+  background: color-mix(in srgb, var(--background-color), transparent 80%);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -833,7 +833,7 @@ section,
 
 .hero h1 {
   margin: 0;
-  font-size: 48px;
+  font-size: 45px;
   font-weight: 700;
   line-height: 56px;
 }
